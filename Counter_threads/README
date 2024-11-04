@@ -1,0 +1,1 @@
+This program shows the number of auxiliary threads that can be created from the main thread. This program also demonstrates data race because it has a mutable shared variable counter.

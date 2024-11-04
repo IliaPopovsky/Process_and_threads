@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1730741038 source:/home/ilia/Process_and_threads/Counter_threads/Counter_threads.c
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<stdlib.h>
+	<pthread.h>
+
