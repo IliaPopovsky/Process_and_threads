@@ -10,8 +10,13 @@
 
 #define SIZE 100000
 
+#include <stdatomic.h>
+
+_Atomic int counter_threads_in_CPU = 0;
+//int counter_threads_in_CPU = 0;
 // This function contains logic that should be executed as the body of a separate thread
 void *thread_body(void *arg){
+  counter_threads_in_CPU++;
   int value = *((int *)arg);
   printf("%d\n", value);
   return NULL;
@@ -35,6 +40,7 @@ int main(void)
        counter++;
     }
     printf("Numbers threads create %d\n", counter);
+    printf("Numbers threads caught in the core %d\n", counter_threads_in_CPU);
     printf("Hello world!\n");
     return 0;
 }
