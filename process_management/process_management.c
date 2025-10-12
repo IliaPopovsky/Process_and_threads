@@ -79,7 +79,7 @@ int main(void)
           err_sys("ошибка вызова waitpid");
       printf("%% ");   // вывести приглашение
    } 
-   
+   printf("\n");
   
    exit(0);
 }
