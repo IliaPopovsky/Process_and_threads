@@ -1,0 +1,3 @@
+#makefile для process_management_with_signal.c
+process_management_with_signal: process_management_with_signal.o
+	gcc -o process_management_with_signal process_management_with_signal.o
