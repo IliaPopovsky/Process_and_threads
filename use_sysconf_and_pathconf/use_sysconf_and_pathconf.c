@@ -66,12 +66,99 @@ int main(int argc, char *argv[])
    
 #ifdef ARG_MAX
    printf("ARG_MAX определен как %d\n", ARG_MAX+0);
-else
+#else
    printf("идентификатор ARG_MAX не найден\n");
 #endif  
 #ifdef _SC_ARG_MAX
    pr_sysconf("ARG_MAX =", _SC_ARG_MAX);
-else
+#else
    printf("идентификатор _SC_ARG_MAX не найден\n");
+#endif 
+
+#ifdef ATEXIT_MAX
+   printf("ATEXIT_MAX определен как %d\n", ATEXIT_MAX+0);
+#else
+   printf("идентификатор ATEXIT_MAX не найден\n");
 #endif  
+#ifdef _SC_ATEXIT_MAX
+   pr_sysconf("ATEXIT_MAX =", _SC_ATEXIT_MAX);
+#else
+   printf("идентификатор _SC_ATEXIT_MAX не найден\n");
+#endif  
+
+#ifdef CHILD_MAX
+   printf("CHILD_MAX определен как %d\n", CHILD_MAX+0);
+#else
+   printf("идентификатор CHILD_MAX не найден\n");
+#endif  
+#ifdef _SC_CHILD_MAX
+   pr_sysconf("CHILD_MAX =", _SC_CHILD_MAX);
+#else
+   printf("идентификатор _SC_CHILD_MAX не найден\n");
+#endif
+
+#ifdef _SC_CLK_TCK
+   pr_sysconf("_SC_CLK_TCK =", _SC_CLK_TCK);
+#else
+   printf("идентификатор _SC_CLK_TCK не найден\n");
+#endif 
+
+#ifdef COLL_WEIGHTS_MAX
+   printf("COLL_WEIGHTS_MAX определен как %d\n", COLL_WEIGHTS_MAX+0);
+#else
+   printf("идентификатор COLL_WEIGHTS_MAX не найден\n");
+#endif  
+#ifdef _SC_COLL_WEIGHTS_MAX
+   pr_sysconf("COLL_WEIGHTS_MAX =", _SC_COLL_WEIGHTS_MAX);
+#else
+   printf("идентификатор _SC_COLL_WEIGHTS_MAX не найден\n");
+#endif
+
+#ifdef DELAYTIMER_MAX
+   printf("DELAYTIMER_MAX определен как %d\n", DELAYTIMER_MAX+0);
+#else
+   printf("идентификатор DELAYTIMER_MAX не найден\n");
+#endif  
+#ifdef _SC_DELAYTIMER_MAX
+   pr_sysconf("DELAYTIMER_MAX =", _SC_DELAYTIMER_MAX);
+#else
+   printf("идентификатор _SC_DELAYTIMER_MAX не найден\n");
+#endif 
+
+#ifdef HOST_NAME_MAX
+   printf("HOST_NAME_MAX определен как %d\n", HOST_NAME_MAX+0);
+#else
+   printf("идентификатор HOST_NAME_MAX не найден\n");
+#endif  
+#ifdef _SC_HOST_NAME_MAX
+   pr_sysconf("HOST_NAME_MAX =", _SC_HOST_NAME_MAX);
+#else
+   printf("идентификатор _SC_HOST_NAME_MAX не найден\n");
+#endif 
+
+   exit(0);
+
 }
+
+static void pr_sysconf(char *mesg, int name)
+{
+   long val;
+   
+   fputs(mesg, stdout);
+   errno = 0;
+   if ((val = sysconf(name)) < 0) {
+       if (errno != 0) {
+           if (errno == EINVAL)
+               fputs(" (не поддерживается)\n", stdout);
+           else
+               err_sys("ошибка вызова sysconf");
+       } else {
+           fputs(" (нет ограничений)\n", stdout);
+       }
+   } else {
+       printf(" %ld\n", val);
+   }
+} 
+   
+   
+               
