@@ -76,25 +76,25 @@ int main(int argc, char *argv[])
 #endif 
 
 #ifdef ATEXIT_MAX
-   printf("ATEXIT_MAX определен как %d\n", ATEXIT_MAX+0);
+   printf("\nATEXIT_MAX определен как %d\n", ATEXIT_MAX+0);
 #else
-   printf("идентификатор ATEXIT_MAX не найден\n");
+   printf("\nидентификатор ATEXIT_MAX не найден\n");
 #endif  
 #ifdef _SC_ATEXIT_MAX
    pr_sysconf("ATEXIT_MAX =", _SC_ATEXIT_MAX);
 #else
-   printf("идентификатор _SC_ATEXIT_MAX не найден\n");
+   printf("\nидентификатор _SC_ATEXIT_MAX не найден\n");
 #endif  
 
 #ifdef CHILD_MAX
-   printf("CHILD_MAX определен как %d\n", CHILD_MAX+0);
+   printf("\nCHILD_MAX определен как %d\n", CHILD_MAX+0);
 #else
-   printf("идентификатор CHILD_MAX не найден\n");
+   printf("\nидентификатор CHILD_MAX не найден\n");
 #endif  
 #ifdef _SC_CHILD_MAX
    pr_sysconf("CHILD_MAX =", _SC_CHILD_MAX);
 #else
-   printf("идентификатор _SC_CHILD_MAX не найден\n");
+   printf("\nидентификатор _SC_CHILD_MAX не найден\n");
 #endif
 
 #ifdef _SC_CLK_TCK
@@ -136,6 +136,17 @@ int main(int argc, char *argv[])
    printf("идентификатор _SC_HOST_NAME_MAX не найден\n");
 #endif 
 
+printf("Необязательные параметры :\n");
+#ifdef _POSIX_RAW_SOCKETS
+   printf("_POSIX_RAW_SOCKETS определен как %ld\n", _POSIX_RAW_SOCKETS+0);
+#else
+   printf("идентификатор _POSIX_RAW_SOCKETS не найден\n");
+#endif  
+#ifdef _SC_RAW_SOCKETS
+   pr_sysconf("_POSIX_RAW_SOCKETS =", _SC_RAW_SOCKETS);
+#else
+   printf("идентификатор _SC_RAW_SOCKETS не найден\n");
+#endif 
    exit(0);
 
 }
