@@ -63,7 +63,9 @@ int main(int argc, char *argv[])
 {
    if (argc != 2)
        err_quit("Использование: use_sysconf_and_pathconf <каталог>");
-   
+       
+
+printf("Обязательные параметры, которые могут быть определены с помощью функции sysconf():\n");   
 #ifdef ARG_MAX
    printf("ARG_MAX определен как %d\n", ARG_MAX+0);
 #else
@@ -136,7 +138,65 @@ int main(int argc, char *argv[])
    printf("\nидентификатор _SC_HOST_NAME_MAX не найден\n");
 #endif 
 
-printf("\nНеобязательные параметры :\n");
+#ifdef IOV_MAX
+   printf("\nIOV_MAX определен как %d\n", IOV_MAX+0);
+#else
+   printf("\nидентификатор IOV_MAX не найден\n");
+#endif  
+#ifdef _SC_IOV_MAX
+   pr_sysconf("IOV_MAX =", _SC_IOV_MAX);
+#else
+   printf("\nидентификатор _SC_IOV_MAX не найден\n");
+#endif 
+
+#ifdef LINE_MAX
+   printf("\nLINE_MAX определен как %d\n", LINE_MAX+0);
+#else
+   printf("\nидентификатор LINE_MAX не найден\n");
+#endif  
+#ifdef _SC_LINE_MAX
+   pr_sysconf("LINE_MAX =", _SC_LINE_MAX);
+#else
+   printf("\nидентификатор _SC_LINE_MAX не найден\n");
+#endif
+
+#ifdef LOGIN_NAME_MAX
+   printf("\nLOGIN_NAME_MAX определен как %d\n", LOGIN_NAME_MAX+0);
+#else
+   printf("\nидентификатор LOGIN_NAME_MAX не найден\n");
+#endif  
+#ifdef _SC_LOGIN_NAME_MAX
+   pr_sysconf("LOGIN_NAME_MAX =", _SC_LOGIN_NAME_MAX);
+#else
+   printf("\nидентификатор _SC_LOGIN_NAME_MAX не найден\n");
+#endif
+
+#ifdef NGROUPS_MAX
+   printf("\nNGROUPS_MAX определен как %d\n", NGROUPS_MAX+0);
+#else
+   printf("\nидентификатор NGROUPS_MAX не найден\n");
+#endif  
+#ifdef _SC_NGROUPS_MAX
+   pr_sysconf("NGROUPS_MAX =", _SC_NGROUPS_MAX);
+#else
+   printf("\nидентификатор _SC_NGROUPS_MAX не найден\n");
+#endif
+
+#ifdef OPEN_MAX
+   printf("\OPEN_MAX определен как %d\n", OPEN_MAX+0);
+#else
+   printf("\nидентификатор OPEN_MAX не найден\n");
+#endif  
+#ifdef _SC_OPEN_MAX
+   pr_sysconf("OPEN_MAX =", _SC_OPEN_MAX);
+#else
+   printf("\nидентификатор _SC_OPEN_MAX не найден\n");
+#endif
+
+
+
+
+printf("\nНеобязательные параметры, которые могут быть определены с помощью функции sysconf():\n");
 #ifdef _POSIX_RAW_SOCKETS
    printf("_POSIX_RAW_SOCKETS определен как %ld\n", _POSIX_RAW_SOCKETS+0);
 #else
@@ -148,6 +208,8 @@ printf("\nНеобязательные параметры :\n");
    printf("идентификатор _SC_RAW_SOCKETS не найден\n");
 #endif 
 
+
+printf("\nОбязательные параметры, которые могут быть определены с помощью функции pathconf():"); 
 #ifdef MAX_CANON
    printf("\nMAX_CANON определен как %d\n", MAX_CANON+0);
 #else
