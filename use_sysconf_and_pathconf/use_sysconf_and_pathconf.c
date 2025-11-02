@@ -183,7 +183,7 @@ printf("Обязательные параметры, которые могут �
 #endif
 
 #ifdef OPEN_MAX
-   printf("\OPEN_MAX определен как %d\n", OPEN_MAX+0);
+   printf("\nOPEN_MAX определен как %d\n", OPEN_MAX+0);
 #else
    printf("\nидентификатор OPEN_MAX не найден\n");
 #endif  
@@ -192,6 +192,84 @@ printf("Обязательные параметры, которые могут �
 #else
    printf("\nидентификатор _SC_OPEN_MAX не найден\n");
 #endif
+
+#ifdef PAGESIZE
+   printf("\nPAGESIZE определен как %d\n", PAGESIZE+0);
+#else
+   printf("\nидентификатор PAGESIZE не найден\n");
+#endif  
+#ifdef _SC_PAGESIZE
+   pr_sysconf("PAGESIZE =", _SC_PAGESIZE);
+#else
+   printf("\nидентификатор _SC_PAGESIZE не найден\n");
+#endif
+
+#ifdef PAGE_SIZE
+   printf("\nPAGE_SIZE определен как %d\n", PAGE_SIZE+0);
+#else
+   printf("\nидентификатор PAGE_SIZE не найден\n");
+#endif  
+#ifdef _SC_PAGE_SIZE
+   pr_sysconf("PAGE_SIZE =", _SC_PAGE_SIZE);
+#else
+   printf("\nидентификатор _SC_PAGE_SIZE не найден\n");
+#endif
+
+#ifdef RE_DUP_MAX
+   printf("\nRE_DUP_MAX определен как %d\n", RE_DUP_MAX+0);
+#else
+   printf("\nидентификатор RE_DUP_MAX не найден\n");
+#endif  
+#ifdef _SC_RE_DUP_MAX
+   pr_sysconf("RE_DUP_MAX =", _SC_RE_DUP_MAX);
+#else
+   printf("\nидентификатор _SC_RE_DUP_MAX не найден\n");
+#endif
+
+#ifdef RTSIG_MAX
+   printf("\nRTSIG_MAX определен как %d\n", RTSIG_MAX+0);
+#else
+   printf("\nидентификатор RTSIG_MAX не найден\n");
+#endif  
+#ifdef _SC_RTSIG_MAX
+   pr_sysconf("RTSIG_MAX =", _SC_RTSIG_MAX);
+#else
+   printf("\nидентификатор _SC_RTSIG_MAX не найден\n");
+#endif
+
+#ifdef SEM_NSEMS_MAX
+   printf("\nSEM_NSEMS_MAX определен как %d\n", SEM_NSEMS_MAX+0);
+#else
+   printf("\nидентификатор SEM_NSEMS_MAX не найден\n");
+#endif  
+#ifdef _SC_SEM_NSEMS_MAX
+   pr_sysconf("SEM_NSEMS_MAX =", _SC_SEM_NSEMS_MAX);
+#else
+   printf("\nидентификатор _SC_SEM_NSEMS_MAX не найден\n");
+#endif
+
+#ifdef SEM_VALUE_MAX
+   printf("\nSEM_VALUE_MAX определен как %d\n", SEM_VALUE_MAX+0);
+#else
+   printf("\nидентификатор SEM_VALUE_MAX не найден\n");
+#endif  
+#ifdef _SC_SEM_VALUE_MAX
+   pr_sysconf("SEM_VALUE_MAX =", _SC_SEM_VALUE_MAX);
+#else
+   printf("\nидентификатор _SC_SEM_VALUE_MAX не найден\n");
+#endif
+
+#ifdef SIGQUEUE_MAX
+   printf("\nSIGQUEUE_MAX определен как %d\n", SIGQUEUE_MAX+0);
+#else
+   printf("\nидентификатор SIGQUEUE_MAX не найден\n");
+#endif  
+#ifdef _SC_SIGQUEUE_MAX
+   pr_sysconf("SIGQUEUE_MAX =", _SC_SIGQUEUE_MAX);
+#else
+   printf("\nидентификатор _SC_SIGQUEUE_MAX не найден\n");
+#endif
+
 
 
 
