@@ -270,7 +270,16 @@ printf("Обязательные параметры, которые могут �
    printf("\nидентификатор _SC_SIGQUEUE_MAX не найден\n");
 #endif
 
-
+#ifdef STREAM_MAX
+   printf("\nSTREAM_MAX определен как %d\n", STREAM_MAX+0);
+#else
+   printf("\nидентификатор STREAM_MAX не найден\n");
+#endif  
+#ifdef _SC_STREAM_MAX
+   pr_sysconf("STREAM_MAX =", _SC_STREAM_MAX);
+#else
+   printf("\nидентификатор _SC_STREAM_MAX не найден\n");
+#endif
 
 
 
