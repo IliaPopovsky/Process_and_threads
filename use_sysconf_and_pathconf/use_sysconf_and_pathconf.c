@@ -281,7 +281,49 @@ printf("Обязательные параметры, которые могут �
    printf("\nидентификатор _SC_STREAM_MAX не найден\n");
 #endif
 
+#ifdef SYMLOOP_MAX
+   printf("\nSYMLOOP_MAX определен как %d\n", SYMLOOP_MAX+0);
+#else
+   printf("\nидентификатор SYMLOOP_MAX не найден\n");
+#endif  
+#ifdef _SC_SYMLOOP_MAX
+   pr_sysconf("SYMLOOP_MAX =", _SC_SYMLOOP_MAX);
+#else
+   printf("\nидентификатор _SC_SYMLOOP_MAX не найден\n");
+#endif
 
+#ifdef TIMER_MAX
+   printf("\nTIMER_MAX определен как %d\n", TIMER_MAX+0);
+#else
+   printf("\nидентификатор TIMER_MAX не найден\n");
+#endif  
+#ifdef _SC_TIMER_MAX
+   pr_sysconf("TIMER_MAX =", _SC_TIMER_MAX);
+#else
+   printf("\nидентификатор _SC_TIMER_MAX не найден\n");
+#endif
+
+#ifdef TTY_NAME_MAX
+   printf("\nTTY_NAME_MAX определен как %d\n", TTY_NAME_MAX+0);
+#else
+   printf("\nидентификатор TTY_NAME_MAX не найден\n");
+#endif  
+#ifdef _SC_TTY_NAME_MAX
+   pr_sysconf("TTY_NAME_MAX =", _SC_TTY_NAME_MAX);
+#else
+   printf("\nидентификатор _SC_TTY_NAME_MAX не найден\n");
+#endif
+
+#ifdef TZNAME_MAX
+   printf("\nTZNAME_MAX определен как %d\n", TZNAME_MAX+0);
+#else
+   printf("\nидентификатор TZNAME_MAX не найден\n");
+#endif  
+#ifdef _SC_TZNAME_MAX
+   pr_sysconf("TZNAME_MAX =", _SC_TZNAME_MAX);
+#else
+   printf("\nидентификатор _SC_TZNAME_MAX не найден\n");
+#endif
 
 printf("\nНеобязательные параметры, которые могут быть определены с помощью функции sysconf():\n");
 #ifdef _POSIX_RAW_SOCKETS
