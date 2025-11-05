@@ -326,15 +326,81 @@ printf("Обязательные параметры, которые могут �
 #endif
 
 printf("\nНеобязательные параметры, которые могут быть определены с помощью функции sysconf():\n");
-#ifdef _POSIX_RAW_SOCKETS
-   printf("_POSIX_RAW_SOCKETS определен как %ld\n", _POSIX_RAW_SOCKETS+0);
+#ifdef _POSIX_ADVISORY_INFO
+   printf("\n_POSIX_ADVISORY_INFO определен как %ld\n", _POSIX_ADVISORY_INFO+0);
 #else
-   printf("идентификатор _POSIX_RAW_SOCKETS не найден\n");
+   printf("\nидентификатор _POSIX_ADVISORY_INFO не найден\n");
+#endif  
+#ifdef _SC_ADVISORY_INFO
+   pr_sysconf("_POSIX_ADVISORY_INFO =", _SC_ADVISORY_INFO);
+#else
+   printf("\nидентификатор _SC_ADVISORY_INFO не найден\n");
+#endif 
+
+#ifdef _POSIX_CPUTIME
+   printf("\n_POSIX_CPUTIME определен как %d\n", _POSIX_CPUTIME+0);
+#else
+   printf("\nидентификатор _POSIX_CPUTIME не найден\n");
+#endif  
+#ifdef _SC_CPUTIME
+   pr_sysconf("_POSIX_CPUTIME =", _SC_CPUTIME);
+#else
+   printf("\nидентификатор _SC_CPUTIME не найден\n");
+#endif
+
+#ifdef _POSIX_FSYNC
+   printf("\n_POSIX_FSYNC определен как %ld\n", _POSIX_FSYNC+0);
+#else
+   printf("\nидентификатор _POSIX_FSYNC не найден\n");
+#endif  
+#ifdef _SC_FSYNC
+   pr_sysconf("_POSIX_FSYNC =", _SC_FSYNC);
+#else
+   printf("\nидентификатор _SC_FSYNC не найден\n");
+#endif
+
+#ifdef _POSIX_IPV6
+   printf("\n_POSIX_IPV6 определен как %ld\n", _POSIX_IPV6+0);
+#else
+   printf("\nидентификатор _POSIX_IPV6 не найден\n");
+#endif  
+#ifdef _SC_IPV6
+   pr_sysconf("_POSIX_IPV6 =", _SC_IPV6);
+#else
+   printf("\nидентификатор _SC_IPV6 не найден\n");
+#endif
+
+#ifdef _POSIX_MEMLOCK
+   printf("\n_POSIX_MEMLOCK определен как %ld\n", _POSIX_MEMLOCK+0);
+#else
+   printf("\nидентификатор _POSIX_MEMLOCK не найден\n");
+#endif  
+#ifdef _SC_MEMLOCK
+   pr_sysconf("_POSIX_MEMLOCK =", _SC_MEMLOCK);
+#else
+   printf("\nидентификатор _SC_MEMLOCK не найден\n");
+#endif
+
+#ifdef _POSIX_MEMLOCK_RANGE
+   printf("\n_POSIX_MEMLOCK_RANGE определен как %ld\n", _POSIX_MEMLOCK_RANGE+0);
+#else
+   printf("\nидентификатор _POSIX_MEMLOCK_RANGE не найден\n");
+#endif  
+#ifdef _SC_MEMLOCK_RANGE
+   pr_sysconf("_POSIX_MEMLOCK_RANGE =", _SC_MEMLOCK_RANGE);
+#else
+   printf("\nидентификатор _SC_MEMLOCK_RANGE не найден\n");
+#endif
+
+#ifdef _POSIX_RAW_SOCKETS
+   printf("\n_POSIX_RAW_SOCKETS определен как %ld\n", _POSIX_RAW_SOCKETS+0);
+#else
+   printf("\nидентификатор _POSIX_RAW_SOCKETS не найден\n");
 #endif  
 #ifdef _SC_RAW_SOCKETS
    pr_sysconf("_POSIX_RAW_SOCKETS =", _SC_RAW_SOCKETS);
 #else
-   printf("идентификатор _SC_RAW_SOCKETS не найден\n");
+   printf("\nидентификатор _SC_RAW_SOCKETS не найден\n");
 #endif 
 
 
