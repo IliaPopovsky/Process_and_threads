@@ -392,6 +392,61 @@ printf("\nНеобязательные параметры, которые мог
    printf("\nидентификатор _SC_MEMLOCK_RANGE не найден\n");
 #endif
 
+#ifdef _POSIX_MONOTONIC_CLOCK
+   printf("\n_POSIX_MONOTONIC_CLOCK определен как %d\n", _POSIX_MONOTONIC_CLOCK+0);
+#else
+   printf("\nидентификатор _POSIX_MONOTONIC_CLOCK не найден\n");
+#endif  
+#ifdef _SC_MONOTONIC_CLOCK
+   pr_sysconf("_POSIX_MONOTONIC_CLOCK =", _SC_MONOTONIC_CLOCK);
+#else
+   printf("\nидентификатор _SC_MONOTONIC_CLOCK не найден\n");
+#endif	
+
+#ifdef _POSIX_MESSAGE_PASSING
+   printf("\n_POSIX_MESSAGE_PASSING определен как %ld\n", _POSIX_MESSAGE_PASSING+0);
+#else
+   printf("\nидентификатор _POSIX_MESSAGE_PASSING не найден\n");
+#endif  
+#ifdef _SC_MESSAGE_PASSING
+   pr_sysconf("_POSIX_MESSAGE_PASSING =", _SC_MESSAGE_PASSING);
+#else
+   printf("\nидентификатор _SC_MESSAGE_PASSING не найден\n");
+#endif
+
+#ifdef _POSIX_PRIORITIZED_IO
+   printf("\n_POSIX_PRIORITIZED_IO определен как %ld\n", _POSIX_PRIORITIZED_IO+0);
+#else
+   printf("\nидентификатор _POSIX_PRIORITIZED_IO не найден\n");
+#endif  
+#ifdef _SC_PRIORITIZED_IO
+   pr_sysconf("_POSIX_PRIORITIZED_IO =", _SC_PRIORITIZED_IO);
+#else
+   printf("\nидентификатор _SC_PRIORITIZED_IO не найден\n");
+#endif
+
+#ifdef _POSIX_PRIORITY_SCHEDULING
+   printf("\n_POSIX_PRIORITY_SCHEDULING определен как %ld\n", _POSIX_PRIORITY_SCHEDULING+0);
+#else
+   printf("\nидентификатор _POSIX_PRIORITY_SCHEDULING не найден\n");
+#endif  
+#ifdef _SC_PRIORITY_SCHEDULING
+   pr_sysconf("_POSIX_PRIORITIZED_IO =", _SC_PRIORITY_SCHEDULING);
+#else
+   printf("\nидентификатор _SC_PRIORITY_SCHEDULING не найден\n");
+#endif
+
+#ifdef __STDC_IEC_559__
+   printf("\n__STDC_IEC_559__ определен как %d\n", __STDC_IEC_559__+0);
+#else
+   printf("\nидентификатор __STDC_IEC_559__ не найден\n");
+#endif  
+#ifdef _SC_IEC_559__
+   pr_sysconf("__STDC_IEC_559__ =", _SC_IEC_559__);
+#else
+   printf("\nидентификатор _SC_IEC_559__ не найден\n");
+#endif
+
 #ifdef _POSIX_RAW_SOCKETS
    printf("\n_POSIX_RAW_SOCKETS определен как %ld\n", _POSIX_RAW_SOCKETS+0);
 #else
