@@ -414,6 +414,17 @@ printf("\nНеобязательные параметры, которые мог
    printf("\nидентификатор _SC_MESSAGE_PASSING не найден\n");
 #endif
 
+#ifdef __STDC_IEC_559__
+   printf("\n__STDC_IEC_559__ определен как %d\n", __STDC_IEC_559__+0);
+#else
+   printf("\nидентификатор __STDC_IEC_559__ не найден\n");
+#endif  
+#ifdef _SC_IEC_559__
+   pr_sysconf("__STDC_IEC_559__ =", _SC_IEC_559__);
+#else
+   printf("\nидентификатор _SC_IEC_559__ не найден\n");
+#endif
+
 #ifdef _POSIX_PRIORITIZED_IO
    printf("\n_POSIX_PRIORITIZED_IO определен как %ld\n", _POSIX_PRIORITIZED_IO+0);
 #else
@@ -436,15 +447,26 @@ printf("\nНеобязательные параметры, которые мог
    printf("\nидентификатор _SC_PRIORITY_SCHEDULING не найден\n");
 #endif
 
-#ifdef __STDC_IEC_559__
-   printf("\n__STDC_IEC_559__ определен как %d\n", __STDC_IEC_559__+0);
+#ifdef _POSIX_THREAD_ROBUST_PRIO_INHERIT
+   printf("\n_POSIX_THREAD_ROBUST_PRIO_INHERIT определен как %ld\n", _POSIX_THREAD_ROBUST_PRIO_INHERIT+0);
 #else
-   printf("\nидентификатор __STDC_IEC_559__ не найден\n");
+   printf("\nидентификатор _POSIX_THREAD_ROBUST_PRIO_INHERIT не найден\n");
 #endif  
-#ifdef _SC_IEC_559__
-   pr_sysconf("__STDC_IEC_559__ =", _SC_IEC_559__);
+#ifdef _SC_THREAD_ROBUST_PRIO_INHERIT
+   pr_sysconf("_POSIX_THREAD_ROBUST_PRIO_INHERIT =", _SC_THREAD_ROBUST_PRIO_INHERIT);
 #else
-   printf("\nидентификатор _SC_IEC_559__ не найден\n");
+   printf("\nидентификатор _SC_THREAD_ROBUST_PRIO_INHERIT не найден\n");
+#endif 
+
+#ifdef _POSIX_THREAD_ROBUST_PRIO_PROTECT
+   printf("\n_POSIX_THREAD_ROBUST_PRIO_PROTECT определен как %d\n", _POSIX_THREAD_ROBUST_PRIO_PROTECT+0);
+#else
+   printf("\nидентификатор _POSIX_THREAD_ROBUST_PRIO_PROTECT не найден\n");
+#endif  
+#ifdef _SC_THREAD_ROBUST_PRIO_PROTECT
+   pr_sysconf("_POSIX_THREAD_ROBUST_PRIO_PROTECT =", _SC_THREAD_ROBUST_PRIO_PROTECT);
+#else
+   printf("\nидентификатор _SC_THREAD_ROBUST_PRIO_PROTECT не найден\n");
 #endif
 
 #ifdef _POSIX_RAW_SOCKETS
@@ -457,6 +479,61 @@ printf("\nНеобязательные параметры, которые мог
 #else
    printf("\nидентификатор _SC_RAW_SOCKETS не найден\n");
 #endif 
+
+#ifdef _POSIX_SHARED_MEMORY_OBJECTS
+   printf("\n_POSIX_SHARED_MEMORY_OBJECTS определен как %ld\n", _POSIX_SHARED_MEMORY_OBJECTS+0);
+#else
+   printf("\nидентификатор _POSIX_SHARED_MEMORY_OBJECTS не найден\n");
+#endif  
+#ifdef _SC_SHARED_MEMORY_OBJECTS
+   pr_sysconf("_POSIX_SHARED_MEMORY_OBJECTS =", _SC_SHARED_MEMORY_OBJECTS);
+#else
+   printf("\nидентификатор _SC_SHARED_MEMORY_OBJECTS не найден\n");
+#endif
+
+#ifdef _POSIX_SYNCHRONIZED_IO
+   printf("\n_POSIX_SYNCHRONIZED_IO определен как %ld\n", _POSIX_SYNCHRONIZED_IO+0);
+#else
+   printf("\nидентификатор _POSIX_SYNCHRONIZED_IO не найден\n");
+#endif  
+#ifdef _SC_SYNCHRONIZED_IO
+   pr_sysconf("_POSIX_SYNCHRONIZED_IO =", _SC_SYNCHRONIZED_IO);
+#else
+   printf("\nидентификатор _SC_SYNCHRONIZED_IO не найден\n");
+#endif
+
+#ifdef _POSIX_SPAWN
+   printf("\n_POSIX_SPAWN определен как %ld\n", _POSIX_SPAWN+0);
+#else
+   printf("\nидентификатор _POSIX_SPAWN не найден\n");
+#endif  
+#ifdef _SC_SPAWN
+   pr_sysconf("_POSIX_SPAWN =", _SC_SPAWN);
+#else
+   printf("\nидентификатор _SC_SPAWN не найден\n");
+#endif
+
+#ifdef _POSIX_SPORADIC_SERVER
+   printf("\n_POSIX_SPORADIC_SERVER определен как %d\n", _POSIX_SPORADIC_SERVER+0);
+#else
+   printf("\nидентификатор _POSIX_SPORADIC_SERVER не найден\n");
+#endif  
+#ifdef _SC_SPORADIC_SERVER
+   pr_sysconf("_POSIX_SPORADIC_SERVER =", _SC_SPORADIC_SERVER);
+#else
+   printf("\nидентификатор _SC_SPORADIC_SERVER не найден\n");
+#endif
+
+#ifdef _POSIX_THREAD_CPUTIME
+   printf("\n_POSIX_THREAD_CPUTIME определен как %d\n", _POSIX_THREAD_CPUTIME+0);
+#else
+   printf("\nидентификатор _POSIX_THREAD_CPUTIME не найден\n");
+#endif  
+#ifdef _SC_THREAD_CPUTIME
+   pr_sysconf("_POSIX_THREAD_CPUTIME =", _SC_THREAD_CPUTIME);
+#else
+   printf("\nидентификатор _SC_THREAD_CPUTIME не найден\n");
+#endif
 
 
 printf("\nОбязательные параметры, которые могут быть определены с помощью функции pathconf():"); 
