@@ -535,6 +535,61 @@ printf("\nНеобязательные параметры, которые мог
    printf("\nидентификатор _SC_THREAD_CPUTIME не найден\n");
 #endif
 
+#ifdef _POSIX_THREAD_PRIO_INHERIT
+   printf("\n_POSIX_THREAD_PRIO_INHERIT определен как %ld\n", _POSIX_THREAD_PRIO_INHERIT+0);
+#else
+   printf("\nидентификатор _POSIX_THREAD_PRIO_INHERIT не найден\n");
+#endif  
+#ifdef _SC_THREAD_PRIO_INHERIT
+   pr_sysconf("_POSIX_THREAD_PRIO_INHERIT =", _SC_THREAD_PRIO_INHERIT);
+#else
+   printf("\nидентификатор _SC_THREAD_PRIO_INHERIT не найден\n");
+#endif
+
+#ifdef _POSIX_THREAD_PRIO_PROTECT
+   printf("\n_POSIX_THREAD_PRIO_PROTECT определен как %ld\n", _POSIX_THREAD_PRIO_PROTECT+0);
+#else
+   printf("\nидентификатор _POSIX_THREAD_PRIO_PROTECT не найден\n");
+#endif  
+#ifdef _SC_THREAD_PRIO_PROTECT
+   pr_sysconf("_POSIX_THREAD_PRIO_PROTECT =", _SC_THREAD_PRIO_PROTECT);
+#else
+   printf("\nидентификатор _SC_THREAD_PRIO_PROTECT не найден\n");
+#endif
+
+#ifdef _POSIX_THREAD_PRIORITY_SCHEDULING
+   printf("\n_POSIX_THREAD_PRIORITY_SCHEDULING определен как %ld\n", _POSIX_THREAD_PRIORITY_SCHEDULING+0);
+#else
+   printf("\nидентификатор _POSIX_THREAD_PRIORITY_SCHEDULING не найден\n");
+#endif  
+#ifdef _SC_THREAD_PRIORITY_SCHEDULING
+   pr_sysconf("_POSIX_THREAD_PRIORITY_SCHEDULING =", _SC_THREAD_PRIORITY_SCHEDULING);
+#else
+   printf("\nидентификатор _SC_THREAD_PRIORITY_SCHEDULING не найден\n");
+#endif
+
+#ifdef _POSIX_THREAD_ATTR_STACKADDR
+   printf("\n_POSIX_THREAD_ATTR_STACKADDR определен как %ld\n", _POSIX_THREAD_ATTR_STACKADDR+0);
+#else
+   printf("\nидентификатор _POSIX_THREAD_ATTR_STACKADDR не найден\n");
+#endif  
+#ifdef _SC_THREAD_ATTR_STACKADDR
+   pr_sysconf("_POSIX_THREAD_ATTR_STACKADDR =", _SC_THREAD_ATTR_STACKADDR);
+#else
+   printf("\nидентификатор _SC_THREAD_ATTR_STACKADDR не найден\n");
+#endif
+
+#ifdef _POSIX_THREAD_PROCESS_SHARED
+   printf("\n_POSIX_THREAD_PROCESS_SHARED определен как %ld\n", _POSIX_THREAD_PROCESS_SHARED+0);
+#else
+   printf("\nидентификатор _POSIX_THREAD_PROCESS_SHARED не найден\n");
+#endif  
+#ifdef _SC_THREAD_PROCESS_SHARED
+   pr_sysconf("_POSIX_THREAD_PROCESS_SHARED =", _SC_THREAD_PROCESS_SHARED);
+#else
+   printf("\nидентификатор _SC_THREAD_PROCESS_SHARED не найден\n");
+#endif
+
 
 printf("\nОбязательные параметры, которые могут быть определены с помощью функции pathconf():"); 
 #ifdef MAX_CANON
