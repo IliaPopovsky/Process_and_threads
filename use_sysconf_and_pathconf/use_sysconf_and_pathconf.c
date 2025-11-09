@@ -590,6 +590,50 @@ printf("\nНеобязательные параметры, которые мог
    printf("\nидентификатор _SC_THREAD_PROCESS_SHARED не найден\n");
 #endif
 
+#ifdef _POSIX_THREAD_SPORADIC_SERVER
+   printf("\n_POSIX_THREAD_SPORADIC_SERVER определен как %d\n", _POSIX_THREAD_SPORADIC_SERVER+0);
+#else
+   printf("\nидентификатор _POSIX_THREAD_SPORADIC_SERVER не найден\n");
+#endif  
+#ifdef _SC_THREAD_SPORADIC_SERVER
+   pr_sysconf("_POSIX_THREAD_SPORADIC_SERVER =", _SC_THREAD_SPORADIC_SERVER);
+#else
+   printf("\nидентификатор _SC_THREAD_SPORADIC_SERVER не найден\n");
+#endif
+
+#ifdef _POSIX_THREAD_ATTR_STACKSIZE
+   printf("\n_POSIX_THREAD_ATTR_STACKSIZE определен как %ld\n", _POSIX_THREAD_ATTR_STACKSIZE+0);
+#else
+   printf("\nидентификатор _POSIX_THREAD_ATTR_STACKSIZE не найден\n");
+#endif  
+#ifdef _SC_THREAD_ATTR_STACKSIZE
+   pr_sysconf("_POSIX_THREAD_ATTR_STACKSIZE =", _SC_THREAD_ATTR_STACKSIZE);
+#else
+   printf("\nидентификатор _SC_THREAD_ATTR_STACKSIZE не найден\n");
+#endif
+
+#ifdef _POSIX_TYPED_MEMORY_OBJECTS
+   printf("\n_POSIX_TYPED_MEMORY_OBJECTS определен как %d\n", _POSIX_TYPED_MEMORY_OBJECTS+0);
+#else
+   printf("\nидентификатор _POSIX_TYPED_MEMORY_OBJECTS не найден\n");
+#endif  
+#ifdef _SC_TYPED_MEMORY_OBJECTS
+   pr_sysconf("_POSIX_TYPED_MEMORY_OBJECTS =", _SC_TYPED_MEMORY_OBJECTS);
+#else
+   printf("\nидентификатор _SC_TYPED_MEMORY_OBJECTS не найден\n");
+#endif
+
+#ifdef _XOPEN_UNIX
+   printf("\n_XOPEN_UNIX определен как %d\n", _XOPEN_UNIX+0);
+#else
+   printf("\nидентификатор _XOPEN_UNIX не найден\n");
+#endif  
+#ifdef _SC_XOPEN_UNIX
+   pr_sysconf("_XOPEN_UNIX =", _SC_XOPEN_UNIX);
+#else
+   printf("\nидентификатор _SC_XOPEN_UNIX не найден\n");
+#endif
+
 
 printf("\nОбязательные параметры, которые могут быть определены с помощью функции pathconf():"); 
 #ifdef MAX_CANON
