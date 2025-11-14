@@ -636,6 +636,28 @@ printf("\nНеобязательные параметры, которые мог
 
 
 printf("\nОбязательные параметры, которые могут быть определены с помощью функции pathconf():"); 
+#ifdef FILESIZEBITS
+   printf("\nFILESIZEBITS определен как %d\n", FILESIZEBITS+0);
+#else
+   printf("\nидентификатор FILESIZEBITS не найден\n");
+#endif  
+#ifdef _PC_FILESIZEBITS
+   pr_pathconf("FILESIZEBITS =", argv[1], _PC_FILESIZEBITS);
+#else
+   printf("\nидентификатор _PC_FILESIZEBITS не найден\n");
+#endif
+
+#ifdef LINK_MAX
+   printf("\nLINK_MAX определен как %d\n", LINK_MAX+0);
+#else
+   printf("\nидентификатор LINK_MAX не найден\n");
+#endif  
+#ifdef _PC_LINK_MAX
+   pr_pathconf("LINK_MAX =", argv[1], _PC_LINK_MAX);
+#else
+   printf("\nидентификатор _PC_LINK_MAX не найден\n");
+#endif
+
 #ifdef MAX_CANON
    printf("\nMAX_CANON определен как %d\n", MAX_CANON+0);
 #else
