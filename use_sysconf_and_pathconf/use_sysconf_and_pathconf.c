@@ -668,6 +668,40 @@ printf("\nОбязательные параметры, которые могут
 #else
    printf("\nидентификатор _PC_MAX_CANON не найден\n");
 #endif
+
+#ifdef MAX_INPUT
+   printf("\nMAX_INPUT определен как %d\n", MAX_INPUT+0);
+#else
+   printf("\nидентификатор MAX_INPUT не найден\n");
+#endif  
+#ifdef _PC_MAX_INPUT
+   pr_pathconf("MAX_INPUT =", argv[1], _PC_MAX_INPUT);
+#else
+   printf("\nидентификатор _PC_MAX_INPUT не найден\n");
+#endif
+
+#ifdef NAME_MAX
+   printf("\nNAME_MAX определен как %d\n", NAME_MAX+0);
+#else
+   printf("\nидентификатор NAME_MAX не найден\n");
+#endif  
+#ifdef _PC_NAME_MAX
+   pr_pathconf("NAME_MAX =", argv[1], _PC_NAME_MAX);
+#else
+   printf("\nидентификатор _PC_NAME_MAX не найден\n");
+#endif
+
+#ifdef PATH_MAX
+   printf("\nPATH_MAX определен как %d\n", PATH_MAX+0);
+#else
+   printf("\nидентификатор PATH_MAX не найден\n");
+#endif  
+#ifdef _PC_PATH_MAX
+   pr_pathconf("PATH_MAX =", argv[1], _PC_PATH_MAX);
+#else
+   printf("\nидентификатор _PC_PATH_MAX не найден\n");
+#endif
+
    exit(0);
 
 }
