@@ -702,6 +702,39 @@ printf("\nОбязательные параметры, которые могут
    printf("\nидентификатор _PC_PATH_MAX не найден\n");
 #endif
 
+#ifdef PIPE_BUF
+   printf("\nPIPE_BUF определен как %d\n", PIPE_BUF+0);
+#else
+   printf("\nидентификатор PIPE_BUF не найден\n");
+#endif  
+#ifdef _PC_PIPE_BUF
+   pr_pathconf("PIPE_BUF =", argv[1], _PC_PIPE_BUF);
+#else
+   printf("\nидентификатор _PC_PIPE_BUF не найден\n");
+#endif
+
+#ifdef _POSIX_TIMESTAMP_RESOLUTION
+   printf("\n_POSIX_TIMESTAMP_RESOLUTION определен как %d\n", _POSIX_TIMESTAMP_RESOLUTION+0);
+#else
+   printf("\nидентификатор _POSIX_TIMESTAMP_RESOLUTION не найден\n");
+#endif  
+#ifdef _PC_TIMESTAMP_RESOLUTION
+   pr_pathconf("_POSIX_TIMESTAMP_RESOLUTION =", argv[1], _PC_TIMESTAMP_RESOLUTION);
+#else
+   printf("\nидентификатор _PC_TIMESTAMP_RESOLUTION не найден\n");
+#endif
+
+#ifdef SYMLINK_MAX
+   printf("\nSYMLINK_MAX определен как %d\n", SYMLINK_MAX+0);
+#else
+   printf("\nидентификатор SYMLINK_MAX не найден\n");
+#endif  
+#ifdef _PC_SYMLINK_MAX
+   pr_pathconf("SYMLINK_MAX =", argv[1], _PC_SYMLINK_MAX);
+#else
+   printf("\nидентификатор _PC_SYMLINK_MAX не найден\n");
+#endif
+
    exit(0);
 
 }
