@@ -735,6 +735,42 @@ printf("\nОбязательные параметры, которые могут
    printf("\nидентификатор _PC_SYMLINK_MAX не найден\n");
 #endif
 
+
+printf("\nНеобязательные параметры, которые могут быть определены с помощью функции pathconf():"); 
+#ifdef _POSIX_CHOWN_RESTRICTED
+   printf("\n_POSIX_CHOWN_RESTRICTED определен как %d\n", _POSIX_CHOWN_RESTRICTED+0);
+#else
+   printf("\nидентификатор _POSIX_CHOWN_RESTRICTED не найден\n");
+#endif  
+#ifdef _PC_CHOWN_RESTRICTED
+   pr_pathconf("_POSIX_CHOWN_RESTRICTED =", argv[1], _PC_CHOWN_RESTRICTED);
+#else
+   printf("\nидентификатор _PC_CHOWN_RESTRICTED не найден\n");
+#endif
+
+#ifdef _POSIX_NO_TRUNC
+   printf("\n_POSIX_NO_TRUNC определен как %d\n", _POSIX_NO_TRUNC+0);
+#else
+   printf("\nидентификатор _POSIX_NO_TRUNC не найден\n");
+#endif  
+#ifdef _PC_NO_TRUNC
+   pr_pathconf("_POSIX_NO_TRUNC =", argv[1], _PC_NO_TRUNC);
+#else
+   printf("\nидентификатор _PC_NO_TRUNC не найден\n");
+#endif
+
+#ifdef _POSIX_VDISABLE
+   printf("\n_POSIX_VDISABLE определен как %d\n", _POSIX_VDISABLE+0);
+#else
+   printf("\nидентификатор _POSIX_VDISABLE не найден\n");
+#endif  
+#ifdef _PC_VDISABLE
+   pr_pathconf("_POSIX_VDISABLE =", argv[1], _PC_VDISABLE);
+#else
+   printf("\nидентификатор _PC_VDISABLE не найден\n");
+#endif
+
+
    exit(0);
 
 }
