@@ -770,6 +770,28 @@ printf("\nНеобязательные параметры, которые мог
    printf("\nидентификатор _PC_VDISABLE не найден\n");
 #endif
 
+#ifdef _POSIX_ASYNC_IO
+   printf("\n_POSIX_ASYNC_IO определен как %d\n", _POSIX_ASYNC_IO+0);
+#else
+   printf("\nидентификатор _POSIX_ASYNC_IO не найден\n");
+#endif  
+#ifdef _PC_ASYNC_IO
+   pr_pathconf("_POSIX_ASYNC_IO =", argv[1], _PC_ASYNC_IO);
+#else
+   printf("\nидентификатор _PC_ASYNC_IO не найден\n");
+#endif
+
+#ifdef _POSIX_PRIO_IO
+   printf("\n_POSIX_PRIO_IO определен как %d\n", POSIX_PRIO_IO+0);
+#else
+   printf("\nидентификатор POSIX_PRIO_IO не найден\n");
+#endif  
+#ifdef _PC_PRIO_IO
+   pr_pathconf("_POSIX_PRIO_IO =", argv[1], _PC_PRIO_IO);
+#else
+   printf("\nидентификатор _PC_PRIO_IO не найден\n");
+#endif
+
 
    exit(0);
 
