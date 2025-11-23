@@ -782,9 +782,9 @@ printf("\nНеобязательные параметры, которые мог
 #endif
 
 #ifdef _POSIX_PRIO_IO
-   printf("\n_POSIX_PRIO_IO определен как %d\n", POSIX_PRIO_IO+0);
+   printf("\n_POSIX_PRIO_IO определен как %d\n", _POSIX_PRIO_IO+0);
 #else
-   printf("\nидентификатор POSIX_PRIO_IO не найден\n");
+   printf("\nидентификатор _POSIX_PRIO_IO не найден\n");
 #endif  
 #ifdef _PC_PRIO_IO
    pr_pathconf("_POSIX_PRIO_IO =", argv[1], _PC_PRIO_IO);
@@ -792,6 +792,28 @@ printf("\nНеобязательные параметры, которые мог
    printf("\nидентификатор _PC_PRIO_IO не найден\n");
 #endif
 
+
+#ifdef _POSIX_SYNC_IO
+   printf("\n_POSIX_SYNC_IO определен как %d\n", _POSIX_SYNC_IO+0);
+#else
+   printf("\nидентификатор _POSIX_SYNC_IO не найден\n");
+#endif  
+#ifdef _PC_SYNC_IO
+   pr_pathconf("_POSIX_SYNC_IO =", argv[1], _PC_SYNC_IO);
+#else
+   printf("\nидентификатор _PC_SYNC_IO не найден\n");
+#endif
+
+#ifdef _POSIX_SYMLINKS
+   printf("\n_POSIX_SYMLINKS определен как %d\n", _POSIX_SYMLINKS+0);
+#else
+   printf("\nидентификатор _POSIX_SYMLINKS не найден\n");
+#endif  
+#ifdef _PC_2_SYMLINKS
+   pr_pathconf("_POSIX_SYMLINKS =", argv[1], _PC_2_SYMLINKS);
+#else
+   printf("\nидентификатор _PC_2_SYMLINKS не найден\n");
+#endif
 
    exit(0);
 
