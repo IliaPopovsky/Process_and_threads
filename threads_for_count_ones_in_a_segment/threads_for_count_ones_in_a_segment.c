@@ -169,14 +169,4 @@ uint64_t countOnes_1( uint64_t left, uint64_t right )
   }
   return count_1;
 }
-uint64_t countOnes( uint64_t left, uint64_t right )
-{
-  uint64_t array[64] = {0};
-  uint64_t count_1 = 0;
-  array[0] = 1;
-  array[1] = 1 + array[0];
-  array[1] = 2;
-  array[2] = 1 + array[0] + array[1] + (array[0] + array[1]);
-  return count_1;
-}
 
