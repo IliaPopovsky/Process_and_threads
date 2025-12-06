@@ -1,1 +1,3 @@
 Эта программа демонстрирует ускорение вычислений с помощью многопоточности на большом диапазоне чисел.
+
+This program provides acceleration of calculations using multithreading of large numbers.
