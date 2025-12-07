@@ -1,3 +1,3 @@
-Эта программа демонстрирует ускорение вычислений с помощью многопоточности на большом диапазоне чисел.
+Эта программа демонстрирует ускорение вычислений (а именно нахождение всех вхождений 1 в двоичном представлении чисел диапазона) с помощью многопоточности на большом диапазоне чисел.
 
-This program provides acceleration of calculations using multithreading of large numbers.
+This program demonstrates how to speed up a computation (namely, finding all occurrences of 1 in the binary representation of numbers in a range) using multithreading on a large range of numbers.
